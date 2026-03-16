@@ -264,3 +264,50 @@ else:
 print("O JOGO DUROU {} HORA(S) E {} MINUTO(S)".format(hf,mf))
 
 #16
+d = int(input())
+a, l, p = input().split()
+a = int(a)
+l = int(l)
+p = int(p)
+
+if(d > a or d > l or d > p):
+    print("N")
+else:
+    print("S")
+    
+
+#17
+s = int(input())
+t = 0
+if(s <= 400):
+    t = 15
+elif(s <= 800):
+    t = 12
+elif(s <= 1200):
+    t = 10
+elif(s <= 2000):
+    t = 7
+else:
+    t = 4
+
+r = s*(t*0.01)
+s = s+r
+print("Novo salário: {:.2f}\nReajuste ganho: {:.2f}\nEm percentual: {} %".format(s,r,t))
+       
+#18
+c1, c2, c3 = input().split()
+c1 = int(c1)
+c2 = int(c2)
+c3 = int(c3)
+p1, p2 = input().split()
+p1 = int(p1)
+p2 = int(p2)
+
+maiorp = p1
+menorp = p2
+if(p2 > p1):
+  maiorp = p2
+  menorp = p1
+
+
+  
