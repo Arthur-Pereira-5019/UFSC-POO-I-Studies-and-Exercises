@@ -308,6 +308,73 @@ menorp = p2
 if(p2 > p1):
   maiorp = p2
   menorp = p1
+maiorc = c1
+menorc = c2
 
+if(c1 > c2):
+    if(c3 > c1):
+        maiorc = c1
+        menorc = c2
+    elif(c3 > c2):
+        maiorc = c3
+        menorc = c2
+    else:
+        maiorc = c2
+        menorc = c3
+else:
+    if(c3 > c2):
+        maiorc = c2
+        menorc = c1
+    elif(c3 > c1):
+        maiorc = c3
+        menorc = c1
+    else:
+        maiorc = c1
+        menorc = c3
 
-  
+if(maiorp >= maiorc && menorp >= menorc):
+    print("S")
+else:
+    print("N")
+
+#19
+    A, B, C, D = input().split()
+A = int(A)
+B = int(B)
+C = int(C)
+D = int(D)
+
+if(B > C and D > A and C+D > A+B and C > 0 and D > 0 and A%2==0):
+    print("Valores aceitos")
+else:
+    print("Valores nao aceitos")
+
+#20
+C, Q = input().split()
+C = int(C)
+Q = int(Q)
+p = 0.0
+if(C == 1):
+    p = 4
+elif(C == 2):
+    p = 4.5
+elif(C == 3):
+    p = 5
+elif(C == 4):
+    p = 2
+else:
+    p = 1.5
+
+print("Total: R$ {:.2f}".format(p*Q))
+    
+#21
+P, C, Q = input().split()
+P = int(P)
+C = int(C)
+Q = int(Q)
+if(Q*P <= C):
+    print("S")
+else:
+    print("N")
+    
+
