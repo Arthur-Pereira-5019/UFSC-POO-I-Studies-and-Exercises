@@ -377,4 +377,100 @@ if(Q*P <= C):
 else:
     print("N")
     
+#22
+    n1, n2, n3 = input().split()
+n1 = float(n1)
+n2 = float(n2)
+n3 = float(n3)
+
+if(n1 > n2 > n3):
+    A = n1
+    B = n2
+    C = n3
+elif(n2 > n1 > n3):
+    A = n2
+    B = n1
+    C = n3
+elif(n1 > n3 > n2):
+    A = n1
+    B = n3
+    C = n2
+elif(n2 > n3 > n1):
+     A = n1
+     B = n2
+     C = n3
+elif(n3 > n2 > n1):
+    A = n3
+    B = n2
+    C = n1
+else:
+    A = n3
+    B = n1
+    C = n2
+    
+if(A >= B+C):
+    print("NAO FORMA TRIANGULO")
+else:
+    if(A*A == B*B + C*C):
+        print("TRIANGULO RETANGULO")
+    elif(A*A > B*B + C*C):
+        print("TRIANGULO OBTUSANGULO")
+    else:
+        print("TRIANGULO ACUTANGULO")
+    if(A == B == C):
+        print("TRIANGULO EQUILATERO")
+    elif(A == B or B == C or C == A):
+        print("TRIANGULO ISOCELES")
+
+
+#23
+        v1 = int(input("Valor 1:"))
+if(0 > v1 or v1 > 1000):
+    v1 = int(input("Valor fora do intervalo.\nDigite novamente"))
+
+v2 = int(input("Valor 2:"))
+if(0 > v2 or v2 > 1000):
+    v2 = int(input("Valor fora do intervalo.\nDigite novamente"))
+if(v1 == v2):
+    v2 = int(input("Valor1 == Valor2.\nDigite novamente"))
+
+vf = v2
+if(v1 > v2):
+    vf = v1
+
+print(vf*3)
+print("Fim do programa")
+
+#24
+n1 = int(input())
+
+if(n1 == 0):
+    print("Nulo")
+elif(n1 > 0):
+    print("Positivo")
+else:
+    print("Negativo")
+
+if(n1%2==0):
+    print("Par")
+    
+#25
+    c = float(input())
+d = 0
+if(c >= 7000):
+    d = 25
+elif(c >= 5000):
+    d = 15
+else:
+    d = 5
+
+print("O valor da compra é: R$ {:.2f}".format(c))
+print("O valor do desconto obtido é: {} %".format(d))
+print("O valor da compra com desconto é: R$ {:.2f}".format(c-c*(d/100)))
+
+
+#26
+n1 = float(input())
+n2 = float(input())
+print("O valor faltante é R$ {:.2f}".format(n1-n2))
 
