@@ -100,19 +100,45 @@ n = int(input())
 for i in range (1,11):
     print("{} x {} = {}".format(n,i,n*i))
 
+
 #10
-    mn = 0
+mn = 0
 amn = ""
 mp = 0
 for i in range(0,5):
-    nomeAluno = input("Forneça o nome do aluno")
-    nota = int(input("Forneça a nota do aluno))
+    nomeAluno = input("Forneça o nome do aluno: ")
+    nota = int(input("Forneça a nota do aluno: "))
     mp += nota
     if(nota > mn):
         mn = nota
         amn = nomeAluno
 
+mt = mp/5
+s = ""
+if(mn >= 5.75):
+    s = "Aprovado"
+elif(mn >= 2.75):
+    s = "Em recuperação"
+else:
+    s = "Reprovado"
+print("A média da turma é {}, o aluno com a melhor nota é {}, sua nota é {} e ele está {}".format(mt,amn,mn,s))
 
-print("A média da turma é {}, o aluno com a melhor nota é {}, sua nota é e ele está {}".format()
+#11
+n = int(input())
+mp = 0
+ma = 0
+me = 0
+for i in range (0,n):
+    v = int(input())
+    mp +=v
+    if(i == 1):
+        ma = v
+        me = v
+    else:
+        if(v > ma):
+            ma = v
+        elif(v < me):
+            me = v
+mt = mp/n
+print("A média dos valores fornecidos é {}, o maior deles informado é {} e o menor {}".format(mt,ma,me))
 
-        
