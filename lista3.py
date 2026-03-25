@@ -142,3 +142,21 @@ for i in range (0,n):
 mt = mp/n
 print("A média dos valores fornecidos é {}, o maior deles informado é {} e o menor {}".format(mt,ma,me))
 
+#12
+n = int(input())
+ml = 0
+mp = 0
+fe = 0
+pmd = ""
+for i in range (n):
+    s = input("Forneça o nome da praia: ")
+    d = int(input("Forneça a distância da praia: "))
+    mp += d
+    if(d > ml):
+        ml = d
+        pmd = s
+    if(15 <= d <= 20):
+        fe += 1
+
+mt = mp/n
+print("A praia mais distante é a {}, à {:.1f}Km, existem no total {} localizadas entre 15Km e 20Km, por fim, a média entre as praias é de {:.1f}KM".format(pmd,ml,fe,mt))
