@@ -4,7 +4,9 @@ B = float(B)
 C = float(C)
 D = float(D)
 
-if(A*C > B*D):
+a = A*C
+g = B*D
+if(a >= g):
     print("G")
 else:
     print("A")
