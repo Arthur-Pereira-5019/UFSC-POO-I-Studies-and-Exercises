@@ -8,10 +8,9 @@ while True:
     D = int(D)
     VF = int(VF)
     VG = int(VG)
-    # S = S0+V*t
     TAI = (12)/VF
-    TPF = D/(VF-VG)
-    if(TAI > abs(TPF)):
+    TPF = (((D**2)+(AI**2))**1/2)/VG
+    if(TAI > TPF):
         print("S")
     else:
         print("N")
